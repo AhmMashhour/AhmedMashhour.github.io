@@ -1,112 +1,161 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Ahmed Mashhour | Cybersecurity Engineer</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Hero Section (Home Page) -->
+<section id="home" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(-45deg, #111827, #1f2937, #0f172a); background-size: 400% 400%; animation: gradientBG 18s ease infinite; padding: 0 20px; position: relative; overflow: hidden;">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: white;
-    }
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    header .logo {
-      font-size: 60px;
-      margin-bottom: 20px;
-    }
-    header .inner h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    .typing {
+      font-size: 24px;
       font-family: 'Fira Code', monospace;
+      color: #67e8f9;
+      margin-top: 15px;
     }
-    header .inner p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
+    .home-buttons {
       margin-top: 30px;
     }
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: #4AB197;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .project-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .project-card h4 {
-      margin-top: 0;
-    }
-    .button.primary {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #4AB197;
+    .home-buttons a {
+      background: #10b981;
       color: white;
+      padding: 12px 24px;
+      margin: 5px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .home-buttons a:hover {
+      background: #059669;
+      transform: translateY(-3px);
+    }
+    .logo {
+      font-size: 70px;
+      color: #22d3ee;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 42px;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+    }
+    .home-overlay {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.03;
+      pointer-events: none;
     }
   </style>
-</head>
-<body class="is-preload">
 
-<!-- Header Section -->
-<header id="header">
+  <div class="home-overlay"></div>
+
   <div class="logo">
-    <i class="fas fa-user-shield" style="color: #4AB197;"></i>
+    <i class="fas fa-user-shield"></i>
   </div>
-  <div class="inner">
-    <h1>Ahmed Mashhour</h1>
-    <p>Cybersecurity Engineer | Threat Analyst | SIEM Specialist</p>
+  <h1>Ahmed Mashhour</h1>
+  <div class="typing" id="typingText"></div>
+  <div class="home-buttons">
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
   </div>
-  <nav>
-    <ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+
+  <script>
+    const textList = [
+      "Cybersecurity Engineer",
+      "SIEM Specialist | Threat Hunter",
+      "Linux + Python + Splunk = 🔐",
+      "Defending Systems Intelligently"
+    ];
+    let i = 0, j = 0, currentText = '', isDeleting = false;
+    const typingElement = document.getElementById("typingText");
+
+    function type() {
+      if (i < textList.length) {
+        if (!isDeleting && j <= textList[i].length) {
+          currentText = textList[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          currentText = textList[i].substring(0, j--);
+        }
+        typingElement.innerHTML = currentText;
+        if (j === textList[i].length) {
+          isDeleting = true;
+          setTimeout(type, 1500);
+        } else if (j === 0) {
+          isDeleting = false;
+          i = (i + 1) % textList.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, isDeleting ? 40 : 100);
+        }
+      }
+    }
+    type();
+  </script>
+</section>
+
+<!-- Tools Section -->
+<section id="tools" style="padding: 80px 20px; max-width: 1200px; margin: auto;">
+  <h2 class="major" style="text-align: center; color: #f1f5f9; font-size: 36px; margin-bottom: 40px;">My Favorite Tools</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
+    <!-- Tool Card -->
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-search" style="font-size: 32px; color: #67e8f9;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">Wireshark</h4>
+      <p style="color: #94a3b8; font-size: 14px;">Packet analysis & network diagnostics</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-terminal" style="font-size: 32px; color: #facc15;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">tcpdump</h4>
+      <p style="color: #94a3b8; font-size: 14px;">Command-line packet sniffer</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-code" style="font-size: 32px; color: #38bdf8;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">Python</h4>
+      <p style="color: #94a3b8; font-size: 14px;">Scripting & automation for cybersecurity</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-database" style="font-size: 32px; color: #60a5fa;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">SQL</h4>
+      <p style="color: #94a3b8; font-size: 14px;">Data querying and integrity validation</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-shield-alt" style="font-size: 32px; color: #34d399;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">Splunk</h4>
+      <p style="color: #94a3b8; font-size: 14px;">SIEM, log analysis and alerting</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-brain" style="font-size: 32px; color: #a78bfa;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">QRadar</h4>
+      <p style="color: #94a3b8; font-size: 14px;">SIEM platform for threat detection</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fab fa-linux" style="font-size: 32px; color: #f87171;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">Linux</h4>
+      <p style="color: #94a3b8; font-size: 14px;">System admin & security operations</p>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-user-lock" style="font-size: 32px; color: #fb923c;"></i>
+      <h4 style="margin-top: 15px; color: #f1f5f9;">Active Directory</h4>
+      <p style="color: #94a3b8; font-size: 14px;">User & identity access control</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- Projects Section -->
 <section id="projects">
