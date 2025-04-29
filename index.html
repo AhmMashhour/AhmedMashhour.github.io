@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
   <title>Ahmed Mashhour | Cybersecurity Engineer</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
     body {
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       font-family: 'Poppins', sans-serif;
       color: #ffffff;
-      margin: 0;
-      padding: 0;
     }
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
@@ -24,92 +26,156 @@
     h1, h2, h3, h4 {
       font-family: 'Fira Code', monospace;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .typing-svg {
+      text-align: center;
+      margin: 30px 0;
     }
-    ul {
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .skills-grid h3 {
+      margin-bottom: 10px;
+    }
+    .skills-grid ul {
       list-style: none;
       padding-left: 0;
     }
-    a {
+    .skills-grid li {
+      margin-bottom: 8px;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .project-card h4 {
+      margin-top: 0;
       color: #4AB197;
+    }
+    .button.primary {
+      background-color: #4AB197;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    .button.primary:hover {
+      background-color: #357f65;
+    }
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      background-color: #4AB197;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #scrollTopBtn:hover {
+      background-color: #357f65;
+    }
+    section {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      margin: 40px auto;
+      border-radius: 12px;
+      max-width: 1000px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    .major {
+      border-left: 5px solid #4AB197;
+      padding-left: 15px;
+      animation: fadeInLeft 2s;
     }
   </style>
 </head>
-
 <body class="is-preload">
 
-<!-- Header -->
-<header id="header" class="animate__animated animate__fadeInDown">
-  <div style="text-align:center; padding:30px;">
-    <h1>Ahmed Mashhour</h1>
-    <p>Cybersecurity Engineer | Threat Analyst | SIEM Specialist</p>
+<!-- Projects Section -->
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2 class="major">Featured Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h4>Python AccessList Manager</h4>
+      <p>Automates access list management using Python for enhanced network control.</p>
+      <a href="https://github.com/AhmMashhour/Python-AccessList-Manager" target="_blank" class="button primary">View Project</a>
+    </div>
+    <div class="project-card">
+      <h4>Talking Gloves for the Deaf and Dumb</h4>
+      <p>Gloves that translate sign language into speech in real-time using Arduino and Python.</p>
+      <a href="https://github.com/AhmMashhour/talking-gloves-for-the-deaf-and-dumb" target="_blank" class="button primary">View Project</a>
+    </div>
+    <div class="project-card">
+      <h4>Cybersecurity Traffic Analysis</h4>
+      <p>Capturing and analyzing network traffic with security policy enforcement using Python, Wireshark, and Splunk.</p>
+      <a href="https://github.com/AhmMashhour/Cybersecurity-Traffic-Analysis-and-Policy-Enforcement" target="_blank" class="button primary">View Project</a>
+    </div>
+    <div class="project-card">
+      <h4>All GitHub Repositories</h4>
+      <p>Explore all my projects, tools, and contributions in one place.</p>
+      <a href="https://github.com/AhmMashhour?tab=repositories" target="_blank" class="button primary">View All Repositories</a>
+    </div>
   </div>
-</header>
-
-<!-- Typing Intro -->
-<div style="text-align: center; margin: 30px;">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=30&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Ahmed+Mashhour;+CyberSecurity+Engineer" alt="Typing SVG">
-</div>
-
-<!-- About -->
-<section id="about" class="animate__animated animate__fadeInUp">
-  <h2 class="major">Professional Summary</h2>
-  <p>Dynamic and highly skilled Cybersecurity Engineer with a strong foundation in security operations, threat detection, and incident response. Experienced in managing large-scale SIEM environments, conducting network forensics, and automating security workflows.</p>
-  <p>Certified across multiple global programs, combining technical expertise with leadership to drive proactive cyber defense strategies. Proficient at aligning security operations with business objectives to ensure resilience and value delivery.</p>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="animate__animated animate__fadeInUp">
-  <h2 class="major">Skills & Tools</h2>
-  <ul>
-    <li><strong>Security Monitoring:</strong> Splunk, Google Chronicle, Wireshark, tcpdump, Nmap</li>
-    <li><strong>Malware & Threat Intel:</strong> VirusTotal, Cuckoo Sandbox</li>
-    <li><strong>Operating Systems:</strong> Kali Linux, Ubuntu, CentOS, Red Hat, Windows Server</li>
-    <li><strong>Scripting & Automation:</strong> Python, Bash, SQL</li>
-    <li><strong>Identity Management:</strong> Active Directory</li>
-    <li><strong>Data Formats:</strong> JSON, YAML</li>
-  </ul>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="animate__animated animate__fadeInUp">
-  <h2 class="major">Projects</h2>
-  <ul>
-    <li><a href="https://github.com/AhmMashhour/Python-AccessList-Manager" target="_blank">Python AccessList Manager</a> – Automates access list management using Python.</li>
-    <li><a href="https://github.com/AhmMashhour/talking-gloves-for-the-deaf-and-dumb" target="_blank">Talking Gloves for the Deaf and Dumb</a> – Translating sign language into speech using Arduino and Python.</li>
-    <li><a href="https://github.com/AhmMashhour/Cybersecurity-Traffic-Analysis-and-Policy-Enforcement" target="_blank">Cybersecurity Traffic Analysis and Policy Enforcement</a> – Network traffic analysis with policy enforcement using Wireshark and Splunk.</li>
-    <li><a href="https://github.com/AhmMashhour?tab=repositories" target="_blank">All GitHub Repositories</a> – Explore all my contributions.</li>
-  </ul>
-</section>
-
-<!-- Certifications -->
-<section id="certifications" class="animate__animated animate__fadeInUp">
+<!-- Certifications Section -->
+<section id="certifications">
   <h2 class="major">Certifications</h2>
-  <ul>
-    <li><a href="https://coursera.org/share/bfc7c66d4fbe1f836f6c10b11e918096" target="_blank">Google Cybersecurity Specialization</a></li>
-    <li><a href="https://coursera.org/share/dfc48eabc7b3f06cd894d155aa2bbbf9" target="_blank">Cyber Security: Technology and Governance</a></li>
-    <li><a href="https://coursera.org/share/81c6ff7593abaf21fe17eede37dc1734" target="_blank">Splunk Search Expert Specialization</a></li>
-    <li><a href="https://coursera.org/share/3123da35b55d02cd14ba9ca332e75ba6" target="_blank">Certified Ethical Hacking (v12)</a></li>
-    <li><a href="https://coursera.org/share/b5f14ae9e84e7d1105a0685783d798e0" target="_blank">Security Operations Center (SOC)</a></li>
-    <li><a href="https://coursera.org/share/de111c82b3afd2231c7f0fd14c60dfc4" target="_blank">Leading People and Teams</a></li>
-  </ul>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h4>Google Cybersecurity Specialization</h4>
+      <a href="https://coursera.org/share/bfc7c66d4fbe1f836f6c10b11e918096" target="_blank" class="button primary">View Certificate</a>
+    </div>
+    <div class="project-card">
+      <h4>Cyber Security: Technology and Governance</h4>
+      <a href="https://coursera.org/share/dfc48eabc7b3f06cd894d155aa2bbbf9" target="_blank" class="button primary">View Certificate</a>
+    </div>
+    <div class="project-card">
+      <h4>Splunk Search Expert Specialization</h4>
+      <a href="https://coursera.org/share/81c6ff7593abaf21fe17eede37dc1734" target="_blank" class="button primary">View Certificate</a>
+    </div>
+    <div class="project-card">
+      <h4>Certified Ethical Hacking (v12)</h4>
+      <a href="https://coursera.org/share/3123da35b55d02cd14ba9ca332e75ba6" target="_blank" class="button primary">View Certificate</a>
+    </div>
+    <div class="project-card">
+      <h4>Security Operations Center (SOC)</h4>
+      <a href="https://coursera.org/share/b5f14ae9e84e7d1105a0685783d798e0" target="_blank" class="button primary">View Certificate</a>
+    </div>
+    <div class="project-card">
+      <h4>Leading People and Teams Specialization</h4>
+      <a href="https://coursera.org/share/de111c82b3afd2231c7f0fd14c60dfc4" target="_blank" class="button primary">View Certificate</a>
+    </div>
+  </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="animate__animated animate__fadeInUp">
-  <h2 class="major">Contact</h2>
-  <ul>
-    <li>Email: <a href="mailto:ahm.mashhour@gmail.com">ahm.mashhour@gmail.com</a></li>
-    <li>LinkedIn: <a href="https://linkedin.com/in/ahmed-mashhour-b074ba178" target="_blank">Ahmed Mashhour LinkedIn</a></li>
-    <li>GitHub: <a href="https://github.com/AhmMashhour" target="_blank">Ahmed Mashhour GitHub</a></li>
-    <li>Instagram: <a href="https://www.instagram.com/cyber.anda" target="_blank">@cyber.anda</a></li>
-    <li>YouTube: <a href="https://youtube.com/@cyberanda" target="_blank">@cyberanda</a></li>
-  </ul>
-</section>
+<!-- باقي الصفحة -->
 
 </body>
 </html>
