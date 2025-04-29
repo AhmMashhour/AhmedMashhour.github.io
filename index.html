@@ -5,117 +5,108 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
-      font-family: 'Poppins', sans-serif;
-      color: #ffffff;
+      color: white;
     }
     @keyframes gradientBG {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
-    h1, h2, h3, h4 {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    header .inner h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
       font-family: 'Fira Code', monospace;
     }
-    .typing-svg {
-      text-align: center;
-      margin: 30px 0;
+    header .inner p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
     }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .skills-grid h3 {
-      margin-bottom: 10px;
-    }
-    .skills-grid ul {
+    nav ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
+      margin-top: 30px;
     }
-    .skills-grid li {
-      margin-bottom: 8px;
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #4AB197;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin-top: 30px;
     }
     .project-card {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
       padding: 20px;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-8px);
-      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     .project-card h4 {
       margin-top: 0;
-      color: #4AB197;
     }
     .button.primary {
-      background-color: #4AB197;
-      color: white;
-      padding: 10px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
-    .button.primary:hover {
-      background-color: #357f65;
-    }
-    #scrollTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 99;
-      background-color: #4AB197;
-      color: white;
-      border: none;
+      display: inline-block;
+      margin-top: 10px;
       padding: 10px 15px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    #scrollTopBtn:hover {
-      background-color: #357f65;
-    }
-    section {
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      margin: 40px auto;
-      border-radius: 12px;
-      max-width: 1000px;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    }
-    .major {
-      border-left: 5px solid #4AB197;
-      padding-left: 15px;
-      animation: fadeInLeft 2s;
+      background-color: #4AB197;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body class="is-preload">
 
-<!-- Projects Section -->
+<!-- Header Section -->
+<header id="header">
+  <div class="logo">
+    <i class="fas fa-user-shield" style="color: #4AB197;"></i>
+  </div>
+  <div class="inner">
+    <h1>Ahmed Mashhour</h1>
+    <p>Cybersecurity Engineer | Threat Analyst | SIEM Specialist</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <!-- Projects Section -->
 <section id="projects">
@@ -153,7 +144,7 @@
       <a href="https://coursera.org/share/bfc7c66d4fbe1f836f6c10b11e918096" target="_blank" class="button primary">View Certificate</a>
     </div>
     <div class="project-card">
-      <h4>Cyber Security: Technology and Governance</h4>
+      <h4>Cyber Security: Technology and Governance</h>
       <a href="https://coursera.org/share/dfc48eabc7b3f06cd894d155aa2bbbf9" target="_blank" class="button primary">View Certificate</a>
     </div>
     <div class="project-card">
@@ -175,7 +166,17 @@
   </div>
 </section>
 
-<!-- باقي الصفحة -->
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="major">Contact</h2>
+  <ul>
+    <li>Email: <a href="mailto:ahm.mashhour@gmail.com">ahm.mashhour@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://linkedin.com/in/ahmed-mashhour-b074ba178" target="_blank">Ahmed Mashhour LinkedIn</a></li>
+    <li>GitHub: <a href="https://github.com/AhmMashhour" target="_blank">Ahmed Mashhour GitHub</a></li>
+    <li>Instagram: <a href="https://www.instagram.com/cyber.anda" target="_blank">@cyber.anda</a></li>
+    <li>YouTube: <a href="https://youtube.com/@cyberanda" target="_blank">@cyberanda</a></li>
+  </ul>
+</section>
 
 </body>
 </html>
