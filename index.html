@@ -1,270 +1,509 @@
-<body style="margin: 0; background-color: #0f172a; font-family: 'Poppins', sans-serif;">
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ahmed Mashhour Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome link -->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	 </head>	 
+	<body class="is-preload">
 
-<!-- Hero Section (Home Page) -->
-<section id="home" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(-45deg, #111827, #1f2937, #0f172a); background-size: 400% 400%; animation: gradientBG 18s ease infinite; padding: 0 20px; position: relative; overflow: hidden;">
-  <style>
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    .typing {
-      font-size: 24px;
-      font-family: 'Fira Code', monospace;
-      color: #67e8f9;
-      margin-top: 15px;
-    }
-    .home-buttons {
-      margin-top: 30px;
-    }
-    .home-buttons a {
-      background: #10b981;
-      color: white;
-      padding: 12px 24px;
-      margin: 5px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .home-buttons a:hover {
-      background: #059669;
-      transform: translateY(-3px);
-    }
-    .logo {
-      font-size: 70px;
-      color: #22d3ee;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 42px;
-      color: #f1f5f9;
-      margin-bottom: 10px;
-    }
-    .home-overlay {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/cubes.png');
-      opacity: 0.03;
-      pointer-events: none;
-    }
-  </style>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  <div class="home-overlay"></div>
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="fas fa-user-shield fa-4x " style="color: rgb(0, 55, 255);" ></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Ahmed Mashhour Portfolio</h1>
+								<p>Cybersecurity Engineer skilled in incident response, threat analysis, and preventive security measures. Passionate about safeguarding digital environments and ensuring the confidentiality, integrity, and availability of critical assets.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Profile</a></li>
+								<li><a href="#work">Skills & Tools</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<li><a href="#blog">Blog/Articles</a></li> <!-- تم إضافة هذا الخيار -->
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
 
-  <div class="logo">
-    <i class="fas fa-user-shield"></i>
-  </div>
-  <h1>Ahmed Mashhour</h1>
-  <div class="typing" id="typingText"></div>
-  <div class="home-buttons">
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#tools">Tools</a>
-    <a href="#contact">Contact</a>
-  </div>
+				<!-- Main -->
+					<div id="main">
 
-  <script>
-    const textList = [
-      "Cybersecurity Engineer",
-      "SIEM Specialist | Threat Hunter",
-      "Linux + Python + Splunk = 🔐",
-      "Defending Systems Intelligently"
-    ];
-    let i = 0, j = 0, currentText = '', isDeleting = false;
-    const typingElement = document.getElementById("typingText");
+						<article id="intro">
+							<h2 class="major">Profile</h2>
+							<span class="image main"><img src="images/AM.jpg" alt="Profile Picture" /></span>
+							<p>
+							   I am Ahmed Mashhour, a highly motivated and detail-oriented Cybersecurity Engineer with a strong foundation in incident response, threat analysis, and preventive security measures. My goal is to safeguard the confidentiality, integrity, and availability of digital assets in today's ever-evolving threat landscape.
+							</p>
+							<p>
+							   I hold a B.Sc. in Electronics and Electrical Communication Engineering from the High Institute for Engineering & Technology in Zagazig, with a GPA of 3.1 (Very Good). I have acquired extensive experience in network security, system administration, and threat management through my work at El Sharqiya Chemicals, where I implement and enforce security policies and manage network segmentation to enhance internal security.
+							</p>
+							<p>
+							   I continuously seek to improve my skills and knowledge through certifications and training programs, including:
+							</p>
+							<ul>
+							   <li>Google - Cybersecurity Professional Certificate</li>
+							   <li>University of London - Cyber Security: Technology and Governance Specialization</li>
+							   <li>University of Michigan - Leading People and Teams</li>
+							   <li>Cisco - CCNA</li>
+							   <li>ISC2 Certified in Cybersecurity</li>
+							   <li>LEARNKARTS - Certified Ethical Hacking (V12)</li>
+							</ul>
+							<p>
+							   I am passionate about staying up-to-date with the latest cybersecurity trends and technologies, and I am eager to bring my analytical skills, technical expertise, and strong problem-solving abilities to a dynamic and challenging work environment.
+							</p>
+						 </article>
+						 
 
-    function type() {
-      if (i < textList.length) {
-        if (!isDeleting && j <= textList[i].length) {
-          currentText = textList[i].substring(0, j++);
-        } else if (isDeleting && j >= 0) {
-          currentText = textList[i].substring(0, j--);
-        }
-        typingElement.innerHTML = currentText;
-        if (j === textList[i].length) {
-          isDeleting = true;
-          setTimeout(type, 1500);
-        } else if (j === 0) {
-          isDeleting = false;
-          i = (i + 1) % textList.length;
-          setTimeout(type, 500);
-        } else {
-          setTimeout(type, isDeleting ? 40 : 100);
-        }
-      }
-    }
-    type();
-  </script>
-</section>
+						<!-- Skills & Tools Section -->
+<article id="work">
+    <h2 class="major">Skills & Tools</h2>
+    <span class="image main">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTFyZHplOThmeWRzaGJxaTUxOGlpb3JjN2IzM25ncWNvOHZjMTUyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/077i6AULCXc0FKTj9s/giphy.gif" alt="Cybersecurity GIF" />
+    </span>
+    
+    <div class="skills-tools-container">
+        <!-- Skills Section -->
+        <section class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li><i class="fas fa-shield-alt"></i> <strong>Security Incident Response</strong>: Managing and responding to cybersecurity incidents in real-time, mitigating threats, and preventing future attacks.</li>
+                <li><i class="fas fa-eye"></i> <strong>Security Monitoring</strong>: Continuous monitoring of networks and systems to detect and respond to security breaches.</li>
+                <li><i class="fas fa-balance-scale"></i> <strong>Governance, Risk Management, and Compliance (GRC)</strong>: Establishing security policies and ensuring compliance with regulations.</li>
+                <li><i class="fas fa-search"></i> <strong>Cybercrime Analysis</strong>: Investigating and analyzing cybercrime activities to prevent and mitigate cyber threats.</li>
+                <li><i class="fas fa-network-wired"></i> <strong>Network Security</strong>: Securing network infrastructure through firewalls, VPNs, and IDS/IPS systems.</li>
+                <li><i class="fas fa-lock"></i> <strong>INFOSEC</strong>: Implementing measures to ensure information confidentiality, integrity, and availability.</li>
+                <li><i class="fas fa-diagnoses"></i> <strong>Vulnerability Assessment</strong>: Identifying security weaknesses in systems and networks to prevent unauthorized access.</li>
+            </ul>
+        </section>
 
-<!-- باقي الأقسام ستظل داكنة ومرئية بوضوح ضمن نفس الخلفية -->
-
-
-<!-- Tools Section -->
-<section id="tools" style="padding: 80px 20px; max-width: 1200px; margin: auto;">
-  <h2 class="major" style="text-align: center; color: #f1f5f9; font-size: 36px; margin-bottom: 40px;">My Favorite Tools</h2>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-search" style="font-size: 32px; color: #67e8f9;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">Wireshark</h4>
-      <p style="color: #94a3b8; font-size: 14px;">Packet analysis & network diagnostics</p>
+        <!-- Tools Section -->
+        <section class="tools">
+            <h3>Tools</h3>
+            <ul>
+                <li><i class="fas fa-server"></i> <strong>Windows Server</strong>: Managing and securing Windows-based server environments.</li>
+                <li><i class="fab fa-linux"></i> <strong>Linux</strong>: Administration and securing Linux servers for enterprise environments.</li>
+                <li><i class="fas fa-code"></i> <strong>Python</strong>: Writing automation scripts and security tools using Python.</li>
+                <li><i class="fas fa-database"></i> <strong>SQL</strong>: Querying and securing databases using SQL for data integrity.</li>
+                <li><i class="fas fa-terminal"></i> <strong>Bash scripting</strong>: Automating tasks in Unix-based systems using Bash.</li>
+                <li><i class="fas fa-chart-bar"></i> <strong>Splunk</strong>: Collecting and analyzing machine data for real-time security monitoring.</li>
+                <li><i class="fas fa-brain"></i> <strong>QRadar</strong>: Security Information and Event Management (SIEM) tool used for threat detection and response.</li>
+                <li><i class="fas fa-robot"></i> <strong>SOAR</strong>: Security Orchestration, Automation, and Response for automating incident response tasks.</li>
+                <li><i class="fas fa-wifi"></i> <strong>Wireshark</strong>: Network packet analyzer for troubleshooting and security analysis.</li>
+                <li><i class="fas fa-network-wired"></i> <strong>tcpdump</strong>: Command-line packet analyzer used for capturing and analyzing network traffic.</li>
+                <li><i class="fas fa-shield-alt"></i> <strong>Suricata</strong>: Network security monitoring and intrusion detection tool.</li>
+            </ul>
+        </section>
     </div>
+</article>
 
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-terminal" style="font-size: 32px; color: #facc15;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">tcpdump</h4>
-      <p style="color: #94a3b8; font-size: 14px;">Command-line packet sniffer</p>
-    </div>
 
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-code" style="font-size: 32px; color: #38bdf8;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">Python</h4>
-      <p style="color: #94a3b8; font-size: 14px;">Scripting & automation for cybersecurity</p>
-    </div>
 
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-database" style="font-size: 32px; color: #60a5fa;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">SQL</h4>
-      <p style="color: #94a3b8; font-size: 14px;">Data querying and integrity validation</p>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-shield-alt" style="font-size: 32px; color: #34d399;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">Splunk</h4>
-      <p style="color: #94a3b8; font-size: 14px;">SIEM, log analysis and alerting</p>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-brain" style="font-size: 32px; color: #a78bfa;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">QRadar</h4>
-      <p style="color: #94a3b8; font-size: 14px;">SIEM platform for threat detection</p>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fab fa-linux" style="font-size: 32px; color: #f87171;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">Linux</h4>
-      <p style="color: #94a3b8; font-size: 14px;">System admin & security operations</p>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(16,185,129,0.1); transition: transform 0.3s ease;">
-      <i class="fas fa-user-lock" style="font-size: 32px; color: #fb923c;"></i>
-      <h4 style="margin-top: 15px; color: #f1f5f9;">Active Directory</h4>
-      <p style="color: #94a3b8; font-size: 14px;">User & identity access control</p>
-    </div>
-  </div>
-</section>
 
 <!-- Projects Section -->
-<section id="projects" style="padding: 80px 20px; max-width: 1200px; margin: auto;">
-  <h2 class="major" style="text-align: center; color: #f1f5f9; font-size: 36px; margin-bottom: 40px;">Featured Projects</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(59,130,246,0.1);">
-      <h4>Python AccessList Manager</h4>
-      <p style="color: #94a3b8;">Automates access list management using Python for enhanced network control.</p>
-      <a href="https://github.com/AhmMashhour/Python-AccessList-Manager" target="_blank" style="display: inline-block; margin-top: 10px; color: #10b981; font-weight: bold;">View Project →</a>
-    </div>
+<article id="projects">
+    <h2 class="major">Projects</h2>
+    
+    <!-- Cybersecurity Projects -->
+    <section class="project-category">
+        <h3>Cybersecurity Projects</h3>
+        <div class="project-item">
+            <h4>Python AccessList Manager</h4>
+            <p>A project aimed at managing access lists using Python to automate and streamline processes.</p>
+            <ul class="project-details">
+                <li><strong>Tools:</strong> Python</li>
+                <li><strong>Result:</strong> Automated management of access lists.</li>
+                <li><a href="https://github.com/AhmMashhour/Python-AccessList-Manager">GitHub Link</a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <h4>Talking Gloves for the Deaf and Dumb</h4>
+            <p>Innovative project developing gloves that translate sign language into speech to help the deaf and dumb communicate easily.</p>
+            <ul class="project-details">
+                <li><strong>Tools:</strong> Arduino, Python</li>
+                <li><strong>Result:</strong> Successfully translated sign language to speech in real time.</li>
+                <li><a href="https://github.com/AhmMashhour/talking-gloves-for-the-deaf-and-dumb">GitHub Link</a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <h4>Cybersecurity Traffic Analysis and Policy Enforcement</h4>
+            <p>A cybersecurity project focused on traffic analysis and enforcing security policies to ensure safe and secure networks.</p>
+            <ul class="project-details">
+                <li><strong>Tools:</strong> Python, Wireshark, Splunk</li>
+                <li><strong>Result:</strong> Enhanced network security through effective traffic analysis.</li>
+                <li><a href="https://github.com/AhmMashhour/Cybersecurity-Traffic-Analysis-and-Policy-Enforcement">GitHub Link</a></li>
+            </ul>
+        </div>
+    </section>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(59,130,246,0.1);">
-      <h4>Talking Gloves for the Deaf and Dumb</h4>
-      <p style="color: #94a3b8;">Gloves that translate sign language into speech in real-time using Arduino and Python.</p>
-      <a href="https://github.com/AhmMashhour/talking-gloves-for-the-deaf-and-dumb" target="_blank" style="display: inline-block; margin-top: 10px; color: #10b981; font-weight: bold;">View Project →</a>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(59,130,246,0.1);">
-      <h4>Cybersecurity Traffic Analysis</h4>
-      <p style="color: #94a3b8;">Capturing and analyzing network traffic with security policy enforcement using Python, Wireshark, and Splunk.</p>
-      <a href="https://github.com/AhmMashhour/Cybersecurity-Traffic-Analysis-and-Policy-Enforcement" target="_blank" style="display: inline-block; margin-top: 10px; color: #10b981; font-weight: bold;">View Project →</a>
-    </div>
-
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(59,130,246,0.1);">
-      <h4>All GitHub Repositories</h4>
-      <p style="color: #94a3b8;">Explore all my projects, tools, and contributions in one place.</p>
-      <a href="https://github.com/AhmMashhour?tab=repositories" target="_blank" style="display: inline-block; margin-top: 10px; color: #10b981; font-weight: bold;">View All →</a>
-    </div>
-  </div>
-</section>
+    <!-- Other Projects -->
+    <section class="project-category">
+        <h3>Other Projects</h3>
+        <div class="project-item">
+            <h4>All GitHub Repositories</h4>
+            <p>Explore all my projects, tools, and contributions on my GitHub profile.</p>
+            <ul class="project-details">
+                <li><a href="https://github.com/AhmMashhour?tab=repositories">GitHub Repositories</a></li>
+            </ul>
+        </div>
+    </section>
+</article>
 
 
-<!-- Certifications Section -->
-<section id="certifications" style="padding: 80px 20px; max-width: 1200px; margin: auto;">
-  <h2 class="major" style="text-align: center; color: #f1f5f9; font-size: 36px; margin-bottom: 40px;">Certifications</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Google Cybersecurity Specialization</h4>
-      <a href="https://coursera.org/share/bfc7c66d4fbe1f836f6c10b11e918096" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Cyber Security: Technology and Governance</h4>
-      <a href="https://coursera.org/share/dfc48eabc7b3f06cd894d155aa2bbbf9" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Splunk Search Expert Specialization</h4>
-      <a href="https://coursera.org/share/81c6ff7593abaf21fe17eede37dc1734" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
+						<!-- Blog/Articles Section -->
+<article id="blog">
+    <h2 class="major">Blog/Articles</h2>
+    <span class="image main">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTduZWpjbnY1cXZsNnB4dDJiZ3lwcnJwcDhlenJ3ZmJqbHhpOTFvMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zyFcsWHX2fdpyb5SBi/giphy.gif" />
+    </span>
+    <p>In this section, I will publish articles and tips on cybersecurity and the technologies used in this field. The articles will cover topics such as threat protection, incident response, and risk management.</p>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Certified Ethical Hacking (v12)</h4>
-      <a href="https://coursera.org/share/3123da35b55d02cd14ba9ca332e75ba6" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
+    <!-- Uploaded Articles Section -->
+    <section class="article-list">
+        <h3>Uploaded Articles</h3>
+        <div class="article-item">
+            <h4><strong>Cyber Security Glossary</strong></h4>
+            <p>A comprehensive glossary for important cybersecurity terms and definitions. 
+            <a href="path_to_your_server/CyberSecurityGlossary.pdf" download="CyberSecurityGlossary.pdf">Download PDF</a></p>
+        </div>
+        <div class="article-item">
+            <h4><strong>Linux Commands</strong></h4>
+            <p>A detailed guide on essential Linux commands for cybersecurity professionals. 
+            <a href="path_to_your_server/LinuxCommands.pdf" download="LinuxCommands.pdf">Download PDF</a></p>
+        </div>
+    </section>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Security Operations Center (SOC)</h4>
-      <a href="https://coursera.org/share/b5f14ae9e84e7d1105a0685783d798e0" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
+    <!-- Cybersecurity Books Section -->
+    <section class="book-list">
+        <h3>Recommended Books</h3>
+        <div class="book-item">
+            <h4><strong>The Web Application Hacker's Handbook</strong></h4>
+            <p>A comprehensive guide to discovering and exploiting security flaws in web applications. This book covers web hacking techniques and strategies used by top ethical hackers.</p>
+        </div>
+        <div class="book-item">
+            <h4><strong>Hacking: The Art of Exploitation</strong></h4>
+            <p>This book provides practical examples and deep insight into the hacking process, making it one of the best resources for learning how to exploit vulnerabilities in systems.</p>
+        </div>
+        <div class="book-item">
+            <h4><strong>Metasploit: The Penetration Tester’s Guide</strong></h4>
+            <p>This book offers a deep dive into Metasploit, the most popular penetration testing tool. It's an excellent resource for both beginners and advanced penetration testers.</p>
+        </div>
+        <div class="book-item">
+            <h4><strong>Practical Malware Analysis</strong></h4>
+            <p>An essential guide to reverse engineering and analyzing malware. This book is crucial for anyone working in incident response or malware research.</p>
+        </div>
+    </section>
+</article>
 
-    <div style="background: rgba(255,255,255,0.04); border-radius: 12px; padding: 20px; color: #f1f5f9; box-shadow: 0 0 20px rgba(245,158,11,0.1);">
-      <h4>Leading People and Teams Specialization</h4>
-      <a href="https://coursera.org/share/de111c82b3afd2231c7f0fd14c60dfc4" target="_blank" style="display: inline-block; margin-top: 10px; color: #facc15; font-weight: bold;">View Certificate →</a>
-    </div>
-  </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact" style="padding: 80px 20px; max-width: 1000px; margin: auto;">
-  <h2 class="major" style="text-align: center; color: #f1f5f9; font-size: 36px; margin-bottom: 40px;">Contact</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px;">
-      <i class="fas fa-envelope" style="font-size: 24px; color: #4AB197;"></i>
-      <div>
-        <strong>Email</strong><br>
-        <a href="mailto:ahm.mashhour@gmail.com" style="color: #4AB197; text-decoration: none;">ahm.mashhour@gmail.com</a>
-      </div>
-    </div>
-    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px;">
-      <i class="fab fa-linkedin" style="font-size: 24px; color: #0A66C2;"></i>
-      <div>
-        <strong>LinkedIn</strong><br>
-        <a href="https://linkedin.com/in/ahmed-mashhour-b074ba178" target="_blank" style="color: #4AB197; text-decoration: none;">Ahmed Mashhour</a>
-      </div>
-    </div>
-    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px;">
-      <i class="fab fa-github" style="font-size: 24px; color: white;"></i>
-      <div>
-        <strong>GitHub</strong><br>
-        <a href="https://github.com/AhmMashhour" target="_blank" style="color: #4AB197; text-decoration: none;">AhmMashhour</a>
-      </div>
-    </div>
-    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px;">
-      <i class="fab fa-instagram" style="font-size: 24px; color: #E1306C;"></i>
-      <div>
-        <strong>Instagram</strong><br>
-        <a href="https://www.instagram.com/cyber.anda" target="_blank" style="color: #4AB197; text-decoration: none;">@cyber.anda</a>
-      </div>
-    </div>
-    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px;">
-      <i class="fab fa-youtube" style="font-size: 24px; color: #FF0000;"></i>
-      <div>
-        <strong>YouTube</strong><br>
-        <a href="https://youtube.com/@cyberanda" target="_blank" style="color: #4AB197; text-decoration: none;">@cyberanda</a>
-      </div>
-    </div>
-  </div>
-</section>
+
+						<!-- Contact Form -->
+<article id="contact">
+    <h2 class="major">Contact</h2>
+    <form method="post" action="https://formspree.io/f/xbljrykv">
+        <div class="fields">
+            <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="Send Message" class="primary" /></li>
+            <li><input type="reset" value="Reset" /></li>
+        </ul>
+    </form>
+    <ul class="icons">
+        <li><a href="https://www.linkedin.com/in/ahmed-mashhour1" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/AhmMashhour" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.instagram.com/ahmed._.mashhour/profilecard/?igsh=bjNtOG5rdzg2N2do" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="mailto:ahm.mashhour@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+</article>
+
+
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
